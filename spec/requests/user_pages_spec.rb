@@ -1,4 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
+
 include ApplicationHelper
 
 describe "User pages" do

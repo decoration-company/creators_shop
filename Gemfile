@@ -4,6 +4,7 @@ gem 'rails', '4.2.6'
 
 gem 'sass-rails', '5.0.2'
 gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'uglifier', '2.5.3'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails', '4.0.3'

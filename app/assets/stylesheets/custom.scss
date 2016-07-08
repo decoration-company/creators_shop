@@ -1,3 +1,25 @@
+@import "bootstrap-custom";
+@import "font-awesome";
+
+/**
+ *  Valiables
+ *
+ */
+$btn-facebook-color:              #fff !default;
+$btn-facebook-bg:                 #5572ab !default;
+$btn-facebook-border:             $btn-facebook-bg !default;
+
+/**
+ *  Common Settings
+ *
+ */
+.btn-facebook {
+  @include button-variant($btn-facebook-color, $btn-facebook-bg, $btn-facebook-border);
+}
+.divider {
+  margin: 20px 0;
+  border-top: solid 1px $modal-content-border-color;
+}
 
 #signup {
   .modal {

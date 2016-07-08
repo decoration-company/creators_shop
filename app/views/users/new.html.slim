@@ -7,6 +7,11 @@
         .modal-header
           h4.modal-title Sign up
         .modal-body
+          = link_to '#', class: "btn btn-facebook btn-lg btn-block" do
+            i.fa.fa-facebook-official  Sign up with Facebook
+
+          .divider
+
           = form_for(@user) do |f|
             = render 'shared/errors', content: @user
             .form-group

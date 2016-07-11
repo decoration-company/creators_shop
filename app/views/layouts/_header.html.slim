@@ -3,7 +3,14 @@ nav.navbar.navbar-light.bg-faded
     | CreatorsShop
     span
 
+    ul.nav.navbar-nav.pull-xs-right
+      li.nav-item
+        - if signed_in?
+          = link_to "Profile", current_user, class: "btn btn-primary-outline"
+          = link_to "Setting", '#', class: "btn btn-primary-outline"
+          = link_to "Sign out", signout_path, method: "delete", class: "btn btn-primary-outline"
+        - else
+          = link_to "Signup", signup_path, class: "btn btn-primary-outline"
+          = link_to "Sign in", signin_path, class: "btn btn-primary-outline"
 
-  ul.nav.navbar-nav.pull-xs-right
-    li.nav-item
-      = link_to "Signup", signup_path, class: "btn btn-primary-outline"
+

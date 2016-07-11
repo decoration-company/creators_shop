@@ -5,20 +5,40 @@
  *  Valiables
  *
  */
-$btn-facebook-color:              #fff !default;
-$btn-facebook-bg:                 #5572ab !default;
-$btn-facebook-border:             $btn-facebook-bg !default;
+$facebook:                 #3b5998 !default;
+$twitter:                  #00aced !default;
 
 /**
  *  Common Settings
  *
  */
 .btn-facebook {
-  @include button-variant($btn-facebook-color, $btn-facebook-bg, $btn-facebook-border);
+  @include button-variant(#fff, $facebook, $facebook);
+}
+.btn-twitter {
+  @include button-variant(#fff, $twitter, $twitter);
 }
 .divider {
-  margin: 20px 0;
-  border-top: solid 1px $modal-content-border-color;
+  color: $input-color-placeholder;
+  width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.2em;
+
+  &:before, &:after {
+    content: "";
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    height: 0.65em;
+    border-bottom: 1px solid $modal-content-border-color;
+    margin: 0 2% 0 -55%;
+  }
+
+  &:after {
+    margin: 0 -55% 0 2%;
+  }
 }
 
 #signup {

@@ -13,6 +13,10 @@ gem 'jbuilder', '2.2.3'
 gem 'slim'
 gem 'bcrypt'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-tether', '>= 1.1.0'
+end
+
 group :development, :test do
   gem 'byebug'
   gem 'sqlite3'

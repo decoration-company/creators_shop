@@ -1,4 +1,55 @@
 @import "bootstrap-custom";
+@import "font-awesome";
+
+/**
+ *  Valiables
+ *
+ */
+$facebook:                 #3b5998 !default;
+$twitter:                  #00aced !default;
+
+/**
+ *  Common Settings
+ *
+ */
+.btn-facebook {
+  @include button-variant(#fff, $facebook, $facebook);
+}
+.btn-twitter {
+  @include button-variant(#fff, $twitter, $twitter);
+}
+.divider {
+  color: $input-color-placeholder;
+  width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+  text-align: center;
+  line-height: 1.2em;
+
+  &:before, &:after {
+    content: "";
+    vertical-align: top;
+    display: inline-block;
+    width: 50%;
+    height: 0.65em;
+    border-bottom: 1px solid $modal-content-border-color;
+    margin: 0 2% 0 -55%;
+  }
+
+  &:after {
+    margin: 0 -55% 0 2%;
+  }
+}
+
+.signup {
+  .modal {
+    display: block;
+    position: relative;
+  }
+  .modal-dialog {
+    max-width: 400px;
+  }
+}
 
 /**
  *  Footer

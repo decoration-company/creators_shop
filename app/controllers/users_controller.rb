@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :signed_in_user, only: [:edit, :update]
 
   def show
     @user = User.find(params[:id])
@@ -20,15 +21,15 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(current_user)
+    @user = User.find(params[:id])
   end
 
   def billing
-    @user = User.find(current_user)
+    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = User.find(current_user)
     if @user.update_attributes(user_params)
       flash[:success] = "Profile updated"
       redirect_to @user
@@ -41,5 +42,12 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def signed_in_user
+      unless signed_in?
+        store_location
+        redirect_to signin_url, notice: "Please sign in."
+      end
     end
 end

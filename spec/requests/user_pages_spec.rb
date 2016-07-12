@@ -55,7 +55,6 @@ describe "User pages" do
       end
     end
   end
-
   
   # describe "profile settings" do
   #   let(:user) { FactoryGirl.create(:user) }

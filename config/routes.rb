@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :users, except: [:new, :edit]
+  resources :users, except: [:new]
   resources :sessions, only: [:new, :create, :destroy]
 
   scope :settings do
-    get 'profile' => 'users#edit'
+    # get 'profile' => 'users#edit'
     get 'billing' => 'users#billing'
   end
 

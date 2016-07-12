@@ -40,6 +40,9 @@ $twitter:                  #00aced !default;
     margin: 0 -55% 0 2%;
   }
 }
+.page-title {
+  margin-bottom: 30px;
+}
 
 .signup {
   .modal {
@@ -49,6 +52,20 @@ $twitter:                  #00aced !default;
   .modal-dialog {
     max-width: 400px;
   }
+}
+
+/**
+ *  Header
+ *
+ */
+
+
+/**
+ *  Contents
+ *
+ */
+.contents {
+  padding: 1rem 0;
 }
 
 /**

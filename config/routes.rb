@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :users
+  resources :users, except: [:new, :edit]
   resources :sessions, only: [:new, :create, :destroy]
+
+  scope :settings do
+    get 'profile' => 'users#edit'
+    get 'billing' => 'users#billing'
+  end
 
   root 'static_pages#home'
   match '/signup', to: 'users#new', via: 'get'

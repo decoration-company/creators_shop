@@ -8,14 +8,13 @@
           h4.modal-title Sign up
         .modal-body
           = link_to '#', class: "btn btn-facebook btn-lg btn-block" do
-            i.fa.fa-facebook-official
+            i.fa.fa-facebook-official.icon-left 
             |  Sign up with Facebook
           = link_to '#', class: "btn btn-twitter btn-lg btn-block" do
-            i.fa.fa-twitter
+            i.fa.fa-twitter.icon-left 
             |  Sign up with Twitter
 
-          .divider
-            | or
+          .divider or
 
           = form_for(@user) do |f|
             = render 'shared/errors', content: @user
@@ -32,3 +31,6 @@
               = f.label :password_confirmation, class: "form-control-label sr-only"
               = f.password_field :password_confirmation, class: "form-control form-control-lg", placeholder: true
             = f.submit "Create my account", class: "btn btn-primary btn-lg btn-block"
+        .modal-footer 
+          | Exisiting user?  
+          = link_to "Sign in", signin_path

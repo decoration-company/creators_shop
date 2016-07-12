@@ -43,15 +43,9 @@ $twitter:                  #00aced !default;
 .page-title {
   margin-bottom: 30px;
 }
-
-.signup {
-  .modal {
-    display: block;
-    position: relative;
-  }
-  .modal-dialog {
-    max-width: 400px;
-  }
+i.icon-left {
+  float: left;
+  line-height: $line-height-lg;
 }
 
 /**
@@ -66,6 +60,15 @@ $twitter:                  #00aced !default;
  */
 .contents {
   padding: 1rem 0;
+}
+.signup, .signin {
+  .modal {
+    display: block;
+    position: relative;
+  }
+  .modal-dialog {
+    max-width: 400px;
+  }
 }
 
 /**

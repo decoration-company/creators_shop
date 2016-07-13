@@ -37,12 +37,12 @@ describe "Authentication" do
 
       it { should have_title(user.name) }
       it { should have_link('Profile',     href: user_path(user)) }
+      it { should have_link('Settings',    href: profile_path) }
       it { should have_link('Sign out',    href: signout_path) }
-      it { should_not have_link('Sign in', href: signin_path) }
 
       describe "followd by signout" do
         before { click_link "Sign out" }
-        it { should have_link('Sign in') }
+        it { should have_link('Sign in',   href: signin_path) }
       end
     end
   end
@@ -54,7 +54,7 @@ describe "Authentication" do
 
       describe "when attempting to visit a protected page" do
         before do
-          visit edit_user_path(user)
+          visit profile_path
           fill_in "Email",    with: user.email
           fill_in "Password", with: user.password
           click_button "Sign in"
@@ -63,7 +63,7 @@ describe "Authentication" do
         describe "after signing in" do
 
           it "should render the desired protected page" do
-            expect(page).to have_title('Profile settings')
+            expect(page).to have_title('Profile setting')
           end
         end
       end
@@ -71,7 +71,7 @@ describe "Authentication" do
       describe "in the Users controller" do
 
         describe "visiting the edit page" do
-          before { visit edit_user_path(user) }
+          before { visit profile_path }
           it { should have_title('Sign in') }
         end
 

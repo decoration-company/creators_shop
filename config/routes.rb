@@ -17,8 +17,6 @@ Rails.application.routes.draw do
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/auth/:provider/callback', to: 'identities#create', via: [:get, :post]
-  # match '/users/finish_signup' => 'users#finish_signup', via: [:get, :patch], as: :finish_signup
-  # 上記の必要性について要件等
   get 'about' => 'static_pages#about'
   get 'privacy' => 'static_pages#privacy'
   get 'terms' => 'static_pages#terms'

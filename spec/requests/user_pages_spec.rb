@@ -55,21 +55,20 @@ describe "User pages" do
       end
     end
   end
-
   
-  # describe "profile settings" do
+  # describe "profile setting" do
   #   let(:user) { FactoryGirl.create(:user) }
-  #   before { visit edit_user_path(user) }
+  #   before { visit 'settings/profile' }
 
   #   describe "page" do
-  #     it { should have_content('Profile settings') }
-  #     it { should have_title('Profile settings') }
+  #     it { should have_content('Profile setting') }
+  #     it { should have_title('Profile setting') }
   #   end
   # end
 
-  # describe "billing settings" do
+  # describe "billing setting" do
   #   let(:user) { FactoryGirl.create(:user) }
-  #   # before { user.stub(:current_user).and_return(1) }
+  #   before { user.stub(:current_user).and_return(user) }
   #   before { visit billing_path }
 
   #   describe "page" do

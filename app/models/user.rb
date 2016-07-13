@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_many :identities, dependent: :destroy
+
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }
@@ -7,6 +9,14 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, length: { minimum: 6 }
+
+  def self.create_with_omniauth(auth)
+    auth['info']['email'] ||= User.dummy_email(auth)
+    create(name: auth['info']['name'], email: auth['info']['email'], password: User.friendly_token(20))
+
+    # Facebook：activated:true
+    # Twitter：activated:false
+  end
 
   def User.new_remember_token
     SecureRandom.urlsafe_base64
@@ -21,4 +31,14 @@ class User < ActiveRecord::Base
     def create_remember_token
       self.remember_token = User.encrypt(User.new_remember_token)
     end
+
+    def self.dummy_email(auth)
+      "#{auth.uid}-#{auth.provider}@example.com"
+    end
+
+    def self.friendly_token(length = 20)
+      rlength = (length * 3) / 4
+      SecureRandom.urlsafe_base64(rlength).tr('lIO0', 'sxyz')
+    end
+
 end

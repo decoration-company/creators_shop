@@ -1,0 +1,15 @@
+= provide(:title, 'Finish Sign up')
+
+.signup.container
+  .modal
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h4.modal-title Email
+        .modal-body
+          = form_for(@user,url: finish_signup_users_path(@user)) do |f|
+            = render 'shared/errors', content: @user
+            .form-group
+              = f.label :email, class: "form-control-label sr-only"
+              = f.text_field :email, class: "form-control form-control-lg", placeholder: true
+            = f.submit "Save", class: "btn btn-primary btn-lg btn-block"

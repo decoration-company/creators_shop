@@ -12,6 +12,9 @@ gem 'turbolinks', '2.3.0'
 gem 'jbuilder', '2.2.3'
 gem 'slim'
 gem 'bcrypt'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.1.0'

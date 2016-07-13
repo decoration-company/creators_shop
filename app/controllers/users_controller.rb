@@ -24,10 +24,6 @@ class UsersController < ApplicationController
     @user = User.find(current_user.id)
   end
 
-  def billing
-    @user = User.find(current_user.id)
-  end
-
   def update
     @user = User.find(current_user.id)
     if @user.update_attributes(user_params)
@@ -36,6 +32,14 @@ class UsersController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def billing
+    @user = User.find(current_user.id)
+  end
+
+  def finish_signup
+    @user = User.find(current_user)
   end
 
   private

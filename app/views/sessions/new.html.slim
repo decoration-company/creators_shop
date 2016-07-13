@@ -7,11 +7,11 @@
         .modal-header
           h4.modal-title Sign in
         .modal-body
-          = link_to '#', class: "btn btn-facebook btn-lg btn-block" do
-            i.fa.fa-facebook-official.icon-left 
+          = link_to '/auth/facebook', class: "btn btn-facebook btn-lg btn-block" do
+            i.fa.fa-facebook-official.icon-left
             |  Sign in with Facebook
-          = link_to '#', class: "btn btn-twitter btn-lg btn-block" do
-            i.fa.fa-twitter.icon-left 
+          = link_to '/auth/twitter', class: "btn btn-twitter btn-lg btn-block" do
+            i.fa.fa-twitter.icon-left
             |  Sign in with Twitter
 
           .divider or
@@ -26,6 +26,6 @@
               = f.password_field :password, class: "form-control form-control-lg", placeholder: true
 
             = f.submit "Sign in", class: "btn btn-primary btn-lg btn-block"
-        .modal-footer 
-          | New user?  
+        .modal-footer
+          | New user?
           = link_to "Sign up", signup_path

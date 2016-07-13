@@ -1,0 +1,18 @@
+ja:
+  views:
+    signup: 新規登録
+    signin: ログイン
+    signput: ログアウト
+    profile: プロフィール
+    settings: 設定
+    about: CreatorsShopとは
+    terms: 利用規約
+    privacy: プライバシー
+    contact: お問い合わせ
+    facebook: Facebook
+    twitter: Twitter
+  sessions:
+    new:
+      title: ログイン
+      signin_with: '%{provider}でログイン'
+      sign_in: ログインする

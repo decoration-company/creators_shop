@@ -2,7 +2,7 @@
 
 .profile.container
   h1.page-title
-    | Profile setting
+    = t('.title')
   = form_for(@user) do |f|
     = render 'shared/errors', content: @user
     .form-group

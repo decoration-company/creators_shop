@@ -1,0 +1,10 @@
+ja:
+  users:
+    show:
+    new:
+      title: 新規登録
+      signup_with: '%{provider}で新規登録'
+    edit:
+      title: プロフィール設定
+    billing:
+      title: 支払い情報登録

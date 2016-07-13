@@ -1,8 +1,8 @@
-= provide(:title, 'Billing')
+= provide(:title, t('.title'))
 
 .profile.container
   h1.page-title
-    | Billing
+    = t('.title')
   = form_for(@user) do |f|
     = render 'shared/errors', content: @user
     .form-group

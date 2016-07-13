@@ -1,0 +1,18 @@
+en:
+  views:
+    signup: Sign up
+    signin: Sign in
+    signput: Sign out 
+    profile: Your profile
+    settings: Settings
+    about: About
+    terms: Terms
+    privacy: Privacy
+    contact: Contact
+    facebook: Facebook
+    twitter: Twitter
+  sessions:
+    new:
+      title: Sign in
+      signin_with: 'Sign in with %{provider}'
+      sign_in: Sign in

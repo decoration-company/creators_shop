@@ -1,10 +1,11 @@
 .container
   .text-xs-center
-    ul.list-inline
-      li.list-inline-item = link_to "About", about_path
-      li.list-inline-item = link_to "Terms", terms_path
-      li.list-inline-item = link_to "Privacy", privacy_path
-      li.list-inline-item = link_to "Contact", "#"
+    small
+      ul.list-inline
+        li.list-inline-item = link_to t('views.about'), about_path
+        li.list-inline-item = link_to t('views.terms'), terms_path
+        li.list-inline-item = link_to t('views.privacy'), privacy_path
+        li.list-inline-item = link_to t('views.contact'), "#"
 
     small.text-muted
       | Copyright &copy; 2016 decoration company

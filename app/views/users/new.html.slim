@@ -1,18 +1,18 @@
-= provide(:title, 'Sign up')
+= provide(:title, t('.title'))
 
 .signup.container
   .modal
     .modal-dialog
       .modal-content
         .modal-header
-          h4.modal-title Sign up
+          h4.modal-title = t('.title')
         .modal-body
           = link_to '/auth/facebook', class: "btn btn-facebook btn-lg btn-block" do
             i.fa.fa-facebook-official.icon-left
-            |  Sign up with Facebook
+            = t('.signup_with', provider: t('views.facebook'))
           = link_to '/auth/twitter', class: "btn btn-twitter btn-lg btn-block" do
             i.fa.fa-twitter.icon-left
-            |  Sign up with Twitter
+            = t('.signup_with', provider: t('views.facebook'))
 
           .divider or
 
@@ -30,7 +30,6 @@
             .form-group
               = f.label :password_confirmation, class: "form-control-label sr-only"
               = f.password_field :password_confirmation, class: "form-control form-control-lg", placeholder: true
-            = f.submit "Create my account", class: "btn btn-primary btn-lg btn-block"
-        .modal-footer
-          | Exisiting user?
-          = link_to "Sign in", signin_path
+            = f.submit class: "btn btn-primary btn-lg btn-block"
+        .modal-footer 
+          = link_to t('views.signin'), signin_path

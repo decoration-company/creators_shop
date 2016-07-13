@@ -10,12 +10,12 @@ nav.navbar.navbar-full.navbar-light.bg-faded
           a.btn.btn-secondary.dropdown-toggle id="user_menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
             = current_user.name
           .dropdown-menu.dropdown-menu-right aria-labelledby="user_menu"
-            = link_to "Profile", current_user, class: "dropdown-item"
-            = link_to "Settings", profile_path, class: "dropdown-item"
+            = link_to t('views.profile'), current_user, class: "dropdown-item"
+            = link_to t('views.setting'), profile_path, class: "dropdown-item"
             .dropdown-divider
-            = link_to "Sign out", signout_path, method: "delete", class: "dropdown-item"
+            = link_to t('views.signout'), signout_path, method: "delete", class: "dropdown-item"
     - else
       li.nav-item
-        = link_to "Signup", signup_path, class: "btn btn-danger"
+        = link_to t('views.signup'), signup_path, class: "btn btn-danger"
       li.nav-item
-        = link_to "Sign in", signin_path, class: "btn btn-secondary"
+        = link_to t('views.signin'), signin_path, class: "btn btn-secondary"

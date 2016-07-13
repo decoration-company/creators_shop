@@ -10,4 +10,7 @@ class StaticPagesController < ApplicationController
 
   def terms  
   end
+
+  def asct
+  end
 end

@@ -1,0 +1,10 @@
+en:
+  users:
+    show:
+    new:
+      title: Join CreatorsShop
+      signup_with: 'Sign up with %{provider}'
+    edit:
+      title: Profile
+    billing:
+      title: Billing

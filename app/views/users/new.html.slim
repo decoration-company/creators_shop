@@ -12,7 +12,7 @@
             = t('.signup_with', provider: t('views.facebook'))
           = link_to '/auth/twitter', class: "btn btn-twitter btn-lg btn-block" do
             i.fa.fa-twitter.icon-left
-            = t('.signup_with', provider: t('views.facebook'))
+            = t('.signup_with', provider: t('views.twitter'))
 
           .divider or
 
@@ -31,5 +31,5 @@
               = f.label :password_confirmation, class: "form-control-label sr-only"
               = f.password_field :password_confirmation, class: "form-control form-control-lg", placeholder: true
             = f.submit class: "btn btn-primary btn-lg btn-block"
-        .modal-footer 
+        .modal-footer
           = link_to t('views.signin'), signin_path

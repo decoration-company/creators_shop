@@ -1,6 +1,9 @@
 = provide(:title, @user.name)
 
-.container
+.container.text-xs-center
+  - if @user.avatar?
+    = image_tag(@user.avatar, size: "200x200", class: "img-circle img-responsive")
+  - else
+    = image_tag(@user.image_url, size: "200x200", class: "img-circle img-responsive")
   h1 = @user.name
   p = @user.email
-  = image_tag(@user.avatar, size: "250x250")

@@ -2,7 +2,7 @@ en:
   views:
     signup: Sign up
     signin: Sign in
-    signput: Sign out 
+    signout: Sign out 
     profile: Your profile
     settings: Settings
     about: About

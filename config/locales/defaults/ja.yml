@@ -134,7 +134,7 @@ ja:
       create: 登録する
       update: 更新する
       user:
-        create: 登録する
+        create: 新規登録
         update: 更新する
     placeholder:
       session:

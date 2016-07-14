@@ -2,7 +2,7 @@ ja:
   views:
     signup: 新規登録
     signin: ログイン
-    signput: ログアウト
+    signout: ログアウト
     profile: プロフィール
     settings: 設定
     about: CreatorsShopとは

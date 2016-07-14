@@ -3,7 +3,7 @@
 .container.text-xs-center
   - if @user.avatar?
     = image_tag(@user.avatar, size: "200x200", class: "img-circle img-responsive")
-  - else
+  - elsif @user.image_url
     = image_tag(@user.image_url, size: "200x200", class: "img-circle img-responsive")
   h1 = @user.name
   p = @user.email

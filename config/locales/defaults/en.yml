@@ -140,8 +140,8 @@ en:
       create: Create %{model}
       update: Update %{model}
       user:
-        create: Sign up
-        update: Update
+        create: Create an account
+        update: Save changes
     placeholder:
       session:
         email: Email

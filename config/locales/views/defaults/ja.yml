@@ -15,4 +15,4 @@ ja:
     new:
       title: ログイン
       signin_with: '%{provider}でログイン'
-      sign_in: ログインする
+      sign_in: ログイン

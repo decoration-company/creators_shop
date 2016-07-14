@@ -17,4 +17,7 @@
     .form-group
       = f.label :password_confirmation, class: "form-control-label"
       = f.password_field :password_confirmation, class: "form-control"
+    .form-group
+      = f.label :avatar, class: "form-control-label"
+      = f.file_field :avatar, class: "form-control"
     = f.submit class: "btn btn-primary"

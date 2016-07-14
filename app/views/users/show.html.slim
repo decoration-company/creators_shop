@@ -2,4 +2,5 @@
 
 .container
   h1 = @user.name
-  = @user.email
+  p = @user.email
+  = image_tag(@user.avatar, size: "250x250")

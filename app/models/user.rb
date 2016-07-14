@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :identities, dependent: :destroy
-
+  mount_uploader :avatar, AvatarUploader
   before_save { self.email = email.downcase }
   before_create :create_remember_token
   validates :name, presence: true, length: { maximum: 50 }
@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
 
   def self.create_with_omniauth(auth)
     auth['info']['email'] ||= User.dummy_email(auth)
-    create(name: auth['info']['name'], email: auth['info']['email'], password: User.friendly_token(20))
+    create(name: auth['info']['name'], email: auth['info']['email'], image_url: auth['info']['image'], password: User.friendly_token(20))
 
     # Facebook：activated:true
     # Twitter：activated:false

@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   scope :settings do
     get 'profile' => 'users#edit'
     get 'billing' => 'users#billing'
+    get 'social'  => 'users#social'
   end
 
   root 'static_pages#home'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
   match '/signin', to: 'sessions#new', via: 'get'
   match '/signout', to: 'sessions#destroy', via: 'delete'
   match '/auth/:provider/callback', to: 'identities#create', via: [:get, :post]
+  match '/auth/destroy/:provider',  to: 'identities#destroy', via: [:delete], as: :revoke_authorization
   get 'about' => 'static_pages#about'
   get 'privacy' => 'static_pages#privacy'
   get 'terms' => 'static_pages#terms'

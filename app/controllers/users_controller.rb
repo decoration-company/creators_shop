@@ -42,6 +42,11 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
   end
 
+  def social
+    @user = User.find(current_user.id)
+    @providers = @user.identities.pluck(:provider)
+  end
+
   private
 
     def user_params

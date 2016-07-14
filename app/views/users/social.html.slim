@@ -1,0 +1,8 @@
+.container
+  .card
+    .card-header
+      | Connected Apps
+    .card-block
+      - unless @providers.nil?
+        = render partial: 'oauth', locals: { provider: "twitter", name: "Twitter" }
+        = render partial: 'oauth', locals: { provider: "facebook", name: "Facebook" }

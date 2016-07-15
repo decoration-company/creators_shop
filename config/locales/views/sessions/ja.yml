@@ -1,0 +1,6 @@
+ja:
+  sessions:
+    new:
+      title: ログイン
+      signin_with: '%{provider}でログイン'
+      sign_in: ログイン

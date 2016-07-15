@@ -11,8 +11,15 @@ ja:
     contact: お問い合わせ
     facebook: Facebook
     twitter: Twitter
-  sessions:
-    new:
-      title: ログイン
-      signin_with: '%{provider}でログイン'
-      sign_in: ログイン
+  msg:
+    welcome: CreatorsShopにようこそ
+    updated_successfully: 'を変更しました'
+    please_signin: ログインしてください
+    invalid_conbination: メールアドレスかパスワードが間違っています
+    signed_out: ログアウトしました
+    already_linked: 連携済みです
+    linked_successfully: 連携しました
+    signed_in: ログインしました
+    finish_registerging: 登録を完了させてください
+    cannot_remove_all_accounts: 全ての連携を解除することはできません
+    unlinked_successfully: 連携を解除しました

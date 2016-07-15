@@ -70,6 +70,14 @@ i.icon-left {
     max-width: 400px;
   }
 }
+.file-custom {
+  border-radius: $input-border-radius;
+
+  &:before {
+    content: "\f07c";
+    font-family: FontAwesome;
+  }
+}
 
 /**
  *  Footer

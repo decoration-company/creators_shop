@@ -21,12 +21,19 @@
           = f.password_field :password_confirmation, class: "form-control"
         .form-group
           = f.label :avatar, class: "form-control-label"
+
           br
           - if @user.persisted? && @user.avatar?
             = image_tag(@user.avatar , size: "100x100")
             br
             = f.check_box :remove_avatar
             = f.label :remove_avatar, class: "form-control-label"
-          = f.file_field :avatar, class: "form-control"
+            br
+
+          = f.label :avatar, class: "file"
+            = f.file_field :avatar, id: "user_avatar"
+            span.file-custom
+
           = f.hidden_field :avatar_cache
+
         = f.submit class: "btn btn-primary"

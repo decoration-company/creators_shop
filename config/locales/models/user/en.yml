@@ -8,3 +8,5 @@ en:
         email:
         password:
         password_confirmation:
+        avatar:
+        remove_avatar:

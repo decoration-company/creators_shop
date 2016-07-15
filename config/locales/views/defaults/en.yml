@@ -11,8 +11,16 @@ en:
     contact: Contact
     facebook: Facebook
     twitter: Twitter
-  sessions:
-    new:
-      title: Sign in
-      signin_with: 'Sign in with %{provider}'
-      sign_in: Sign in
+  msg:
+    welcome: Welcome to CreatorsShop
+    updated_successfully: Updated successfully
+    please_signin: Please signin
+    invalid_conbination: Invalid email/password combination
+    signed_out: You're signed out
+    already_linked: Already linked that account
+    linked_successfully: Successfully linked that account
+    signed_in: Signed in
+    finish_registerging: Please finish registering
+    cannot_remove_all_accounts: It isn't possible to remove all of the accounts!
+    unlinked_successfully: Successfully unlinked that account
+  

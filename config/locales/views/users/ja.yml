@@ -5,6 +5,6 @@ ja:
       title: 新規登録
       signup_with: '%{provider}で新規登録'
     edit:
-      title: プロフィール設定
+      title: プロフィール情報
     billing:
-      title: 支払い情報登録
+      title: 支払い情報

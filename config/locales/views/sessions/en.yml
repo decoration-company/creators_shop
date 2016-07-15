@@ -1,0 +1,6 @@
+en:
+  sessions:
+    new:
+      title: Sign in
+      signin_with: 'Sign in with %{provider}'
+      sign_in: Sign in

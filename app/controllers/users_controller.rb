@@ -27,8 +27,17 @@ class UsersController < ApplicationController
   def update
     @user = User.find(current_user.id)
     if @user.update_attributes(user_params)
-      flash[:success] = t('msg.updated_successfully')
-      redirect_to @user
+
+      if params[:account]
+        title = t('users.edit.title')
+      elsif params[:billing]
+        title = t('users.billing.title')
+      else
+        title = t('views.settings')
+      end
+
+      flash[:success] = t('msg.updated_successfully', content: title)
+      redirect_to :back
     else
       render 'edit'
     end
@@ -42,7 +51,7 @@ class UsersController < ApplicationController
     @user = User.find(current_user)
   end
 
-  def social
+  def connect
     @user = User.find(current_user.id)
     @providers = @user.identities.pluck(:provider)
   end

@@ -5,6 +5,8 @@ en:
       title: Join CreatorsShop
       signup_with: 'Sign up with %{provider}'
     edit:
-      title: Profile
+      title: Account
     billing:
       title: Billing
+    connect:
+      title: Applications

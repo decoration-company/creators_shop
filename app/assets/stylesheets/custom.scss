@@ -15,8 +15,14 @@ $twitter:                  #00aced !default;
 .btn-facebook {
   @include button-variant(#fff, $facebook, $facebook);
 }
+.btn-facebook-outline {
+  @include button-outline-variant($facebook);
+}
 .btn-twitter {
   @include button-variant(#fff, $twitter, $twitter);
+}
+.btn-twitter-outline {
+  @include button-outline-variant($twitter);
 }
 .divider {
   color: $input-color-placeholder;

@@ -8,9 +8,9 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
 
   scope :settings do
-    get 'profile' => 'users#edit'
+    get 'account' => 'users#edit'
     get 'billing' => 'users#billing'
-    get 'social'  => 'users#social'
+    get 'applications'  => 'users#connect'
   end
 
   root 'static_pages#home'

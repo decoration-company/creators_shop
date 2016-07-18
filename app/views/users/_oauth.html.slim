@@ -1,11 +1,9 @@
 div class="#{provider}"
   - if @providers.include?("#{provider}")
-    = link_to revoke_authorization_path("#{provider}"), class: "btn btn-warning btn-block", method: :delete, data: { confirm: "Are you sure?" } do
-      i.fa.fa-chain-broken.fa-lg.fa-fw.fa-pull-left
-      | Unlink
-      = name
+    p = link_to revoke_authorization_path("#{provider}"), class: "btn btn-#{provider}-outline", method: :delete, data: { confirm: "Are you sure?" } do
+      i class=["fa", "fa-#{provider}", "fa-fw"]
+      = t('views.disconnect', name: name)
   - else
-    = link_to '/auth/' + "#{provider}", class: "btn btn-#{provider} btn-block" do
-      i class=["fa", "fa-#{provider}", "fa-lg", "fa-fw", "fa-pull-left"]
-      | Sign In with
-      = name
+    p = link_to '/auth/' + "#{provider}", class: "btn btn-#{provider}-outline" do
+      i class=["fa", "fa-#{provider}", "fa-fw"]
+      = t('views.connect', name: name)

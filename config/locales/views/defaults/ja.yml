@@ -11,9 +11,11 @@ ja:
     contact: お問い合わせ
     facebook: Facebook
     twitter: Twitter
+    connect: '%{name}と連携する'
+    disconnect: '%{name}連携解除'
   msg:
     welcome: CreatorsShopにようこそ
-    updated_successfully: 'を変更しました'
+    updated_successfully: '%{content}を更新しました'
     please_signin: ログインしてください
     invalid_conbination: メールアドレスかパスワードが間違っています
     signed_out: ログアウトしました

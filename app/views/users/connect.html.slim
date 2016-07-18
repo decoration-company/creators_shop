@@ -1,7 +1,9 @@
+= provide(:title, t('.title'))
+
 .container
   .card
     .card-header
-      | Connected Apps
+      = t('.title')
     .card-block
       - unless @providers.nil?
         = render partial: 'oauth', locals: { provider: "twitter", name: "Twitter" }

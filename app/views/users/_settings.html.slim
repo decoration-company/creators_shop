@@ -1,0 +1,12 @@
+.settings.list-group
+  = link_to account_path, class: "list-group-item #{'active' if current_page?(account_path)}" do
+    = t('users.edit.title')
+    i.fa.fa-chevron-right.icon-right
+  
+  = link_to billing_path, class: "list-group-item #{'active' if current_page?(billing_path)}" do
+    = t('users.billing.title')
+    i.fa.fa-chevron-right.icon-right
+
+  = link_to applications_path, class: "list-group-item #{'active' if current_page?(applications_path)}" do
+    = t('users.connect.title')
+    i.fa.fa-chevron-right.icon-right

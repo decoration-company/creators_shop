@@ -12,9 +12,7 @@ html
         .header
           = render 'layouts/header'
 
-        - flash.each do |key, value|
-          div class=["alert", "alert-#{key}"]
-            = value
+        = render 'shared/flash'
 
         .contents
           == yield

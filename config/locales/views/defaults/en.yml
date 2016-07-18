@@ -20,7 +20,7 @@ en:
     already_linked: Already linked that account
     linked_successfully: Successfully linked that account
     signed_in: Signed in
-    finish_registerging: Please finish registering
+    finished_registering: Finished registering
     cannot_remove_all_accounts: It isn't possible to remove all of the accounts!
     unlinked_successfully: Successfully unlinked that account
   

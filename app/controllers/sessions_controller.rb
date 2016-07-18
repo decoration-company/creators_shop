@@ -8,13 +8,14 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_back_or user
     else
-      flash.now[:error] = t('msg.invalid_conbination')
+      flash.now[:danger] = t('msg.invalid_conbination')
       render 'new'
     end
   end
 
   def destroy
     sign_out
-    redirect_to root_url, notice: t('msg.signed_out')
+    flash[:info] = t('msg.signed_out')
+    redirect_to root_url
   end
 end

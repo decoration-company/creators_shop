@@ -1,40 +1,43 @@
 = provide(:title, t('.title'))
 
 .account.container
-  
-  .card
-    .card-header
-      = t('.title')
-    .card-block
-      = form_for(@user) do |f|
-        = render 'shared/errors', content: @user
-        .form-group
-          = f.label :name, class: "form-control-label"
-          = f.text_field :name, class: "form-control"
-        .form-group
-          = f.label :email, class: "form-control-label"
-          = f.text_field :email, class: "form-control"
-        .form-group
-          = f.label :password, class: "form-control-label"
-          = f.password_field :password, class: "form-control"
-        .form-group
-          = f.label :password_confirmation, class: "form-control-label"
-          = f.password_field :password_confirmation, class: "form-control"
-        .form-group
-          = f.label :avatar, class: "form-control-label"
+  .row
+    .col-lg-3.col-md-4
+      = render 'settings'
+    .col-lg-9.col-md-8
+      .card
+        .card-header
+          = t('.title')
+        .card-block
+          = form_for(@user) do |f|
+            = render 'shared/errors', content: @user
+            .form-group
+              = f.label :name, class: "form-control-label"
+              = f.text_field :name, class: "form-control"
+            .form-group
+              = f.label :email, class: "form-control-label"
+              = f.text_field :email, class: "form-control"
+            .form-group
+              = f.label :password, class: "form-control-label"
+              = f.password_field :password, class: "form-control"
+            .form-group
+              = f.label :password_confirmation, class: "form-control-label"
+              = f.password_field :password_confirmation, class: "form-control"
+            .form-group
+              = f.label :avatar, class: "form-control-label"
 
-          br
-          - if @user.persisted? && @user.avatar?
-            = image_tag(@user.avatar , size: "100x100")
-            br
-            = f.check_box :remove_avatar
-            = f.label :remove_avatar, class: "form-control-label"
-            br
+              br
+              - if @user.persisted? && @user.avatar?
+                = image_tag(@user.avatar , size: "100x100")
+                br
+                = f.check_box :remove_avatar
+                = f.label :remove_avatar, class: "form-control-label"
+                br
 
-          = f.label :avatar, class: "file"
-            = f.file_field :avatar, id: "user_avatar"
-            span.file-custom
+              = f.label :avatar, class: "file"
+                = f.file_field :avatar, id: "user_avatar"
+                span.file-custom
 
-          = f.hidden_field :avatar_cache
+              = f.hidden_field :avatar_cache
 
-        = f.submit class: "btn btn-primary", name: 'account'
+            = f.submit class: "btn btn-primary", name: 'account'

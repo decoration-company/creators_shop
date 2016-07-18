@@ -1,10 +1,14 @@
 = provide(:title, t('.title'))
 
-.container
-  .card
-    .card-header
-      = t('.title')
-    .card-block
-      - unless @providers.nil?
-        = render partial: 'oauth', locals: { provider: "twitter", name: "Twitter" }
-        = render partial: 'oauth', locals: { provider: "facebook", name: "Facebook" }
+.connect.container
+  .row
+    .col-lg-3.col-md-4
+      = render 'settings'
+    .col-lg-9.col-md-8
+      .card
+        .card-header
+          = t('.title')
+        .card-block
+          - unless @providers.nil?
+            = render partial: 'oauth', locals: { provider: "twitter", name: "Twitter" }
+            = render partial: 'oauth', locals: { provider: "facebook", name: "Facebook" }

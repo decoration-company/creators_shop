@@ -17,15 +17,15 @@ describe "User pages" do
   describe "signup page" do
     before { visit signup_path }
 
-    it { should have_content('Sign up') }
-    it { should have_title(full_title('Sign up')) }
+    it { should have_content("Join CreatorsShop") }
+    it { should have_title("Join CreatorsShop") }
   end
 
   describe "signup" do
 
     before { visit signup_path }
 
-    let(:submit) { "Create my account" }
+    let(:submit) { "Create an account" }
 
     describe "with invalid information" do
       it "should not create a user" do
@@ -49,33 +49,13 @@ describe "User pages" do
         before { click_button submit }
         let(:user) { User.find_by(email: 'user@example.com') }
 
-        it { should have_link('Sign out') }
+        it { should have_link("Sign out") }
         it { should have_title(user.name) }
-        it { should have_selector('div.alert.alert-success',text: 'Welcome') }
+        it { should have_selector("div.alert.alert-info", text: "Welcome to CreatorsShop") }
       end
     end
   end
   
-  # describe "profile setting" do
-  #   let(:user) { FactoryGirl.create(:user) }
-  #   before { visit 'settings/profile' }
-
-  #   describe "page" do
-  #     it { should have_content('Profile setting') }
-  #     it { should have_title('Profile setting') }
-  #   end
-  # end
-
-  # describe "billing setting" do
-  #   let(:user) { FactoryGirl.create(:user) }
-  #   before { user.stub(:current_user).and_return(user) }
-  #   before { visit billing_path }
-
-  #   describe "page" do
-  #     it { should have_content('Billing') }
-  #     it { should have_title('Billing') }
-  #   end
-  # end
 end
 
 

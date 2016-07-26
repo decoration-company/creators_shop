@@ -17,8 +17,8 @@ describe "User pages" do
   describe "signup page" do
     before { visit signup_path }
 
-    it { should have_content("Join CreatorsShop") }
-    it { should have_title("Join CreatorsShop") }
+    it { should have_content('Join CreatorsShop') }
+    it { should have_title('Join CreatorsShop') }
   end
 
   describe "signup" do
@@ -49,9 +49,9 @@ describe "User pages" do
         before { click_button submit }
         let(:user) { User.find_by(email: 'user@example.com') }
 
-        it { should have_link("Sign out") }
+        it { should have_link('Sign out') }
         it { should have_title(user.name) }
-        it { should have_selector("div.alert.alert-info", text: "Welcome to CreatorsShop") }
+        it { should have_selector('div.alert.alert-info', text: 'Welcome to CreatorsShop') }
       end
     end
   end

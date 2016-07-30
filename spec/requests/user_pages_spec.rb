@@ -1,8 +1,6 @@
 require 'rails_helper'
 
-include ApplicationHelper
-
-describe "User pages" do
+RSpec.describe "UserPages", type: :request do
 
   subject { page }
 

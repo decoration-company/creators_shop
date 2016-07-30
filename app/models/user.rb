@@ -1,14 +1,18 @@
 class User < ActiveRecord::Base
-  has_many :identities, dependent: :destroy
-  mount_uploader :avatar, AvatarUploader
-  before_save { self.email = email.downcase }
-  before_create :create_remember_token
-  validates :name, presence: true, length: { maximum: 50 }
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  has_secure_password
+  mount_uploader :avatar, AvatarUploader
+
+  has_many :identities, dependent: :destroy
+
+  validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX },
             uniqueness: { case_sensitive: false }
-  has_secure_password
   validates :password, length: { minimum: 6 }, allow_nil: true
+
+  before_create :create_remember_token
+  before_save { self.email = email.downcase }
 
   def self.create_with_omniauth(auth)
     auth['info']['email'] ||= User.dummy_email(auth)

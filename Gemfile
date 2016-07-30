@@ -37,6 +37,7 @@ end
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara'
+  gem 'database_rewinder'
   gem 'factory_girl_rails'
 end
 

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe "Authentication" do
+RSpec.describe "Authentication", type: :request do
 
   subject { page }
 

@@ -1,7 +1,5 @@
 require 'rails_helper'
 
-include ApplicationHelper
-
 describe "User pages" do
 
   subject { page }

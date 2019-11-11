@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '5.0.0'
 
 gem 'sass-rails'
-gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'bootstrap', '~> 4.3.1'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.1'
 gem 'uglifier'
 gem 'coffee-rails'
